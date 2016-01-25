@@ -11,7 +11,7 @@
     "gulp-sass": "^2.1.1"
   },
   "scripts": {
-    "test": "electron ."
+    "start": "gulp && electron ."
   },
   "repository": {
     "type": "git",
