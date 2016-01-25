@@ -1,0 +1,32 @@
+{
+  "name": "effem",
+  "version": "1.0.0",
+  "description": "A Last.fm OS X client",
+  "main": "index.js",
+  "dependencies": {
+    "electron-prebuilt": "^0.36.5"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1"
+  },
+  "scripts": {
+    "test": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trmml/effem.git"
+  },
+  "keywords": [
+    "effem",
+    "lastfm",
+    "os",
+    "x"
+  ],
+  "author": "Josh Trommel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trmml/effem/issues"
+  },
+  "homepage": "https://github.com/trmml/effem#readme"
+}
