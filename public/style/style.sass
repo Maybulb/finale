@@ -7,16 +7,19 @@ body
   background: $background-colour
   font-family: $font-family
   text-align: center
-  margin-top: 20%
   h1#title
     font-size: 2.5em
-  a input[type=button]
-    background: darken($background-colour, 5%)
+    margin-top: 15%
+  a
     color: $primary-colour
-    border: 5px solid darken($background-colour, 20%)
-    font-size: 1.5em
-    font-family: inherit
-    outline: none
-    padding: 15px
-    &:hover
-      border: 5px solid darken($background-colour, 35%)
+    text-decoration: none
+    input[type=button]
+      color: inherit
+      background: darken($background-colour, 5%)
+      border: 5px solid darken($background-colour, 20%)
+      font-size: 1.5em
+      font-family: inherit
+      outline: none
+      padding: 15px
+      &:hover
+        border: 5px solid darken($background-colour, 35%)
