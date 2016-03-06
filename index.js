@@ -12,13 +12,9 @@ app.on('window-all-closed', function() {
 
 app.on('ready', function() {
   mainWindow = new BrowserWindow({
-    width: 800,
-    height:450,
-    frame:false,
-    center: true,
-    useContentSize: true
-  });
-
+    width: 800, height:450,
+    frame:false, resizable: false
+  })
   mainWindow.loadURL('file://' + __dirname + '/public/index.html');
 
   mainWindow.on('closed', function() {

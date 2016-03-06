@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "electron-prebuilt": "^0.36.5",
-    "lastfm": "^0.9.2"
+    "lastfm": "^0.9.2",
+    "openurl": "^1.1.1",
+    "request": "^2.69.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
