@@ -1,30 +1,26 @@
 var request = require('request');
-var LastFmNode = require('lastfm').LastFmNode;
 var util = require('util');
 
-var lastfm = new LastFmNode({
-  api_key: 'e2a6b6788c47485e6428a3dc6c1bfdd3',
-  secret: '3e1b84dc73b310e41dbbde2daa5eb1d4',
-});
+var lastfm = {
+  api_key: 'cc9f13aac2db0b7bb34c27466debea9a',
+  secret: 'c48542a15d29ce7d469a05c5f34b5f39',
+  url: 'http://ws.audioscrobbler.com/2.0/'
+}
 
-function token() {
-  var url = util.format("http://ws.audioscrobbler.com/2.0/?method=auth.getToken&api_key=%s&api_sig=%s&format=json", lastfm.api_key, lastfm.secret)
+function get_token(cb) {
+  var url = util.format("%s?method=auth.getToken&api_key=%s&api_sig=%s&format=json", lastfm.url, lastfm.api_key, lastfm.secret)
 
   request(url, function(err, res, body) {
     if (!err && res.statusCode == 200) {
-      return (JSON.parse(body).token) // I need to add promises so this doesn't return undefined
+      cb(JSON.parse(body).token)
     }
   });
 
 }
 
-function auth() {
-  var url = util.format("http://www.last.fm/api/auth/?api_key=%s&token=%s", lastfm.api_key, token())
-  return url;
+function auth(callback) {
+  get_token(function(token) {
+    var url = util.format("http://www.last.fm/api/auth/?api_key=%s&token=%s", lastfm.api_key, token)
+    location.href = url;
+  })
 }
-
-function init() {
-  auth()
-}
-
-console.log(auth())

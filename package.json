@@ -1,11 +1,10 @@
 {
-  "name": "effem",
+  "name": "finale",
   "version": "1.0.0",
   "description": "A Last.fm OS X client",
   "main": "index.js",
   "dependencies": {
     "electron-prebuilt": "^0.36.5",
-    "lastfm": "^0.9.2",
     "openurl": "^1.1.1",
     "request": "^2.69.0"
   },
@@ -18,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trmml/effem.git"
+    "url": "git+https://github.com/trmml/finale.git"
   },
   "keywords": [
-    "effem",
+    "finale",
     "lastfm",
     "os",
     "x"
@@ -29,7 +28,7 @@
   "author": "Josh Trommel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trmml/effem/issues"
+    "url": "https://github.com/trmml/finale/issues"
   },
-  "homepage": "https://github.com/trmml/effem#readme"
+  "homepage": "https://github.com/trmml/finale#readme"
 }
