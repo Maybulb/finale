@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trmml/finale.git"
+    "url": "git+https://github.com/madebybright/finale.git"
   },
   "keywords": [
     "finale",
@@ -28,7 +28,7 @@
   "author": "Josh Trommel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trmml/finale/issues"
+    "url": "https://github.com/madebybright/finale/issues"
   },
-  "homepage": "https://github.com/trmml/finale#readme"
+  "homepage": "https://github.com/madebybright/finale#readme"
 }
