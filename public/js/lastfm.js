@@ -1,8 +1,10 @@
-var auth, lastfm, request, token, util;
+var auth, lastfm, open, request, token, util;
 
 request = require('request');
 
 util = require('util');
+
+open = require('open');
 
 lastfm = {
   api_key: 'cc9f13aac2db0b7bb34c27466debea9a',
@@ -20,10 +22,10 @@ token = function(cb) {
   });
 };
 
-auth = function(callback) {
+auth = function(cb) {
   return token(function(token) {
     var url;
     url = util.format('http://www.last.fm/api/auth/?api_key=%s&token=%s', lastfm.api_key, token);
-    location.href = url;
+    open(url);
   });
 };

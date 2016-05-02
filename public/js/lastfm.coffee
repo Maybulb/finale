@@ -1,5 +1,6 @@
 request = require('request')
 util    = require('util')
+open    = require('open')
 
 lastfm =
   api_key: 'cc9f13aac2db0b7bb34c27466debea9a'
@@ -14,8 +15,8 @@ token = (cb) ->
     return
   return
 
-auth = (callback) ->
+auth = (cb) ->
   token (token) ->
     url = util.format('http://www.last.fm/api/auth/?api_key=%s&token=%s', lastfm.api_key, token)
-    location.href = url
+    open(url)
     return

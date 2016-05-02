@@ -2,8 +2,17 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var coffee = require('gulp-coffee');
 
+var paths = [
+	'public/style/*.sass',
+	'public/js/*.coffee'
+]
+
 gulp.task('default', ['compile']);
 gulp.task('compile', ['sass', 'coffee']);
+
+gulp.task('watch', function(){
+	gulp.watch(paths, ['sass', 'coffee'])
+});
 
 gulp.task('sass', function() {
 	gulp.src('public/style/style.sass')
